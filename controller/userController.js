@@ -26,7 +26,7 @@ export const userLogin = async (req, res) => {
       role: isExist.role
     }, 'secret');
 
-    res.cookie('token', 'mytoken', {
+    res.cookie('token', token, {
       httpOnly: true,
       secure: true,
       sameSite: 'None',
