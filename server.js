@@ -21,7 +21,7 @@ mongoose.connect('mongodb+srv://batchdevops431:moles900@cluster0.jvc1g.mongodb.n
 
 
 app.use(cors({
-  origin: ['http://localhost:3000'],
+  origin: ['http://localhost:3000','https://front-two-ivory.vercel.app'],
   credentials: true
 }));
 
