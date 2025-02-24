@@ -16,15 +16,7 @@ export const getSingleProduct = async (req, res) => {
   const { id } = req.params
   try {
     const product = await Product.findById(id);
-    return res.status(200).json({
-      title: product.title,
-      description: product.description,
-      price: product.price,
-      category: product.category,
-      brand: product.brand,
-      image: product.image,
-      id: product._id
-    });
+    return res.status(200).json(product);
   } catch (err) {
     return res.status(400).json({ message: `${err}` });
   }
